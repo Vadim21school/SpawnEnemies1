@@ -1,17 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
-        
-    }
-
-
-    void Update()
-    {
-        
+        Debug.Log("I was born");
     }
 }
