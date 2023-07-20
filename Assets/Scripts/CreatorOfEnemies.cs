@@ -5,6 +5,8 @@ public class CreatorOfEnemies : MonoBehaviour
 {
     [SerializeField] private Player _template;
 
+    private float _waitingTimeSpawn = 2f;
+
     private void Start()
     {
         StartCoroutine(SpawnEnemy());
@@ -12,7 +14,7 @@ public class CreatorOfEnemies : MonoBehaviour
    
     private IEnumerator SpawnEnemy()
     {
-        var waitForTwoSeconds = new WaitForSeconds(2f);
+        var waitForTwoSeconds = new WaitForSeconds(_waitingTimeSpawn);
 
         for (int i = 0; i < transform.childCount; i++)
         {
