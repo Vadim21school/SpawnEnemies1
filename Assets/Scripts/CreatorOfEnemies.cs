@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CreatorOfEnemies : MonoBehaviour
 {
-    [SerializeField] private Player _template;
+    [SerializeField] private PatrolZone _template;
 
     private float _waitingTimeSpawn = 2f;
 
