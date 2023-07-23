@@ -13,10 +13,10 @@ public class PatrolZone : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
 
-        StartCoroutine(c_Move());
+        StartCoroutine(MoveByX());
     }
 
-    private IEnumerator c_Move()
+    private IEnumerator MoveByX()
     {
         float min = transform.position.x - _diapason;
         float max = transform.position.x + _diapason;

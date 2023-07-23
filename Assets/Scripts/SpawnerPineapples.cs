@@ -1,14 +1,17 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpawnerPineapples : MonoBehaviour
 {
     [SerializeField] private Pineapple _pineapple;
 
-    void Update()
+    private void Start()
     {
-        if (!FindObjectOfType<Pineapple>())
-        {
-            Instantiate(_pineapple, transform.GetChild(Random.Range(0, transform.childCount)).position, Quaternion.identity);
-        }
+        CreatePineapple();
+    }
+
+    public void CreatePineapple()
+    {
+        Instantiate(_pineapple, transform.GetChild(Random.Range(0, transform.childCount)).position, Quaternion.identity);
     }
 }

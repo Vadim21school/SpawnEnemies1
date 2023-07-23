@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class CreatorOfEnemies : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private PatrolZone _template;
 
