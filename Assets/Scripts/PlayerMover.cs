@@ -10,11 +10,13 @@ public class PlayerMover : MonoBehaviour
     private Animator _runAnimantion;
     private float _horizontalInput;
     private Rigidbody2D _rigidbody2D;
+    private int _nameTriggerHash;
 
     private void Start()
     {
         _runAnimantion = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _nameTriggerHash = Animator.StringToHash("isWalk");
     }
 
 
@@ -37,7 +39,7 @@ public class PlayerMover : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            _runAnimantion.SetTrigger("isWalk");
+            _runAnimantion.SetTrigger(_nameTriggerHash);
         }
     }
 
